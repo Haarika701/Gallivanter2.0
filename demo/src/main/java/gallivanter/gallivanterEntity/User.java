@@ -1,29 +1,73 @@
 package gallivanter.gallivanterEntity;
 
-
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "USER")
 public class User {
+
+    private static final GenerationType SEQUENCE = null;
+    private Long id;
+    private String firstString;
+    private String lastString;
+    private String emailString;
+    private String passString;
+    private String imageUString;
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", length = 11)
-    Long id;
+    @GeneratedValue(strategy = SEQUENCE, generator = "CUST_SEQ")
+    @Column(name = "USER_ID")
+    public Long getId() {
+        return id;
+    }
 
-    @Column(name = "first_name", nullable = false, length = 45)
-    String firstString;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    @Column(name = "last_name", nullable = true, length = 45)
-    String lastString;
+    @Column(name = "FIRST_NAME", nullable = false, length = 45)
+    public String getfirstString() {
+        return firstString;
+    }
 
-    @Column(name = "email", nullable = false, length = 128)
-    String email;
+    public void setfirstString(String firstString) {
+        this.firstString = firstString;
+    }
 
-    @Column(name = "password", nullable = false, length = 64)
-    String passwordString;
+    @Column(name = "LAST_NAME", nullable = true, length = 45)
+    public String getLastString() {
+        return lastString;
+    }
 
-    @Column(name = "photo", nullable = true, length = 64)
-    String photo;
+    public void setLastString(String lastString) {
+        this.lastString = lastString;
+    }
+
+    @Column(name = "EMAIL", nullable = false, length = 128)
+    public String getEmailString() {
+        return emailString;
+    }
+
+    public void setEmaString(String emailString) {
+        this.emailString = emailString;
+    }
+
+    @Column(name = "PHOTO_URL", nullable = true, length = 64)
+    public String getImageUString() {
+        return imageUString;
+    }
+
+    public void setImageUString(String imageUString) {
+        this.imageUString = imageUString;
+    }
+
+    @Column(name = "PASSWORD", nullable = false, length = 8)
+    public String getPasswordString() {
+        return passString;
+    }
+
+    public void setPasswordString(String passwordString) {
+        this.passString = passwordString;
+    }
 
 }

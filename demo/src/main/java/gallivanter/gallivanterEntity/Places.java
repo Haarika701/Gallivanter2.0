@@ -3,23 +3,60 @@ package gallivanter.gallivanterEntity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "places")
+@Table(name = "PLACES")
 public class Places {
+
+    private Long id;
+    private String city;
+    private String state;
+    private String country;
+    private String image;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto increment the primary key
-    @Column(name = "id", length = 11)
-    Long id;
+    @Column(name = "ID", length = 11)
+    public Long getId() {
+        return id;
+    }
 
-    @Column(name = "city", length = 45)
-    String city;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    @Column(name = "state", length = 45)
-    String state;
+    @Column(name = "CITY", length = 45)
+    public String getCity() {
+        return city;
+    }
 
-    @Column(name = "country", length = 45)
-    String country;
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-    @Column(name = "image", length = 64)
-    String image;
+    @Column(name = "STATE", length = 45)
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    @Column(name = "COUNTRY", length = 45)
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    @Column(name = "IMAGE", length = 64)
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
 }
