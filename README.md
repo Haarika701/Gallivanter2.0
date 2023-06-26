@@ -2,7 +2,7 @@
 
 
 # Project Owner
-  Haarika Ramadugu
+Haarika Ramadugu
   - GitHub userName: Haarika701
   - Email: hramadugu@gmail.com
   - LinkedIn: https://www.linkedin.com/in/hr-83427b205/
