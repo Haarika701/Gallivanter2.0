@@ -1,5 +1,5 @@
 # Gallivanter2.0
-# Gallivanter: A Travel Itenary App
+
 
 # Project Owner
   Haarika Ramadugu
